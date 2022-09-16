@@ -1,0 +1,120 @@
+#container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  a{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* titulo de enterate de la U  */
+  .tituloE{
+    
+    height: 50px;
+    display: flex;
+    align-items: center;
+    /* para que la letra este en medio de todo del backgraund */
+    //justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: #33B9FF ;
+  }
+  .margeTexto{
+    margin-left: 10px;
+    order: -2;
+    flex-grow: 1;
+    justify-content: flex-start,space-between;
+  }
+  /*  */
+  ion-item{
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  /* espacio entre noticia y noticia */
+  ion-card{
+    margin:20px;
+    margin-top: 15px;
+  }
+  /* botones debajo de la noticia */
+  .botonComentario{
+    flex-grow: 1;
+    order: 2;
+    width: 80px;
+    height: 50px;
+    white-space: normal;
+    
+  }
+  .botonCompartir{
+    
+    order: 3;
+    width: 80px;
+    height: 50px;
+  }
+  .botonReaccion{
+    background-color: white;
+    color: white;
+    
+    height: 50px;
+    flex-grow: 4;
+    order: 2;
+    
+    //flex: ;
+  }
+  /* imagen redonda */
+  .imgRedonda{
+    width:50px;
+    height:50px;
+    border-radius:150px;
+  }
+  /* perfil y tiempo de publicacion */
+  .formatoPerfil{
+    background-color: #8c8c8c;
+    width:150px;
+    height:50px;
+  }
+  .textoPerfil{
+    text-align: center;
+  }
+  /* color de icono corazon */
+  .colorIcon{
+    /* background-color: red; */
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* tamanio icon new */
+  .tamanio{
+    border-radius:150px;
+    width:  45px ;
+    height: 45px ;
+    order: 4; 
+    padding: 5px;
+    margin: 10px;
+    justify-content: flex-end ;
+    
+    box-shadow: #33B9FF;
+  
+  }

@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>administrador</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-card class="tituloE">  
+  <a class="margeTexto">publicar Noticas Uab</a>
+</ion-card>
+<ion-content>
+  <ion-card >
+    <ion-card-header>
+      
+        <ion-list>
+  
+    <form   (ngSubmit)="onSubmitTemplate()" novalidate>
+            <ion-item>
+              <ion-label position="floating">Titulo</ion-label>
+              <ion-input type="text" name="titulo" placeholder="ingrese titulo de noticia" [(ngModel)]="noticia.titulo"  ></ion-input>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label position="floating">Descripcion</ion-label>
+              <ion-input type="text" name="subtitulo" placeholder="Ingrese subtitulo de la noticia" [(ngModel)]="noticia.subtitulo" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Informe de la noticia</ion-label>
+              <ion-input type="text" name="caracteres" placeholder="informe de la noticia" [(ngModel)]="noticia.caracter" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Categoria</ion-label>
+              <ion-input type="text" name="categoria" placeholder="Categoria" [(ngModel)]="noticia.categoria" ></ion-input>
+            </ion-item>
+          </form>
+        </ion-list>
+        <ion-button>Subir imagen</ion-button>
+        <ion-button class="posicion"  (click)="validar()" [disabled]="opcion()">Subir Noticia</ion-button>
+      
+          <!-- <br>
+          <ion-button (click)="abrirGaleria()"> Subir imagen</ion-button >  -->   
+      
+      </ion-card-header>
+    
+    </ion-card>
+</ion-content>

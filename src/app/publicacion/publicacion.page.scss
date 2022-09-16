@@ -1,0 +1,21 @@
+.tituloE{
+  
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* para que la letra este en medio de todo del backgraund */
+    //justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: #33B9FF ;
+  }
+  .margeTexto{
+    margin-left: 10px;
+    color: black;
+  }
+   /* posicion del boton */
+   .posicion{
+    margin-left: 30%;
+    margin-right: 30%;
+   }

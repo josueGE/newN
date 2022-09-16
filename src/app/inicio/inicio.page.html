@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-card class="tituloE">  
+  <a class="margeTexto">Enterate de la UAB</a>
+  <a class="tamanio" *ngIf="administrador()" routerLink="/publicacion" ion-button><ion-icon size="large" name="newspaper-outline"></ion-icon></a>
+</ion-card>
+
+<ion-content>
+  <div>
+    <ion-card *ngFor="let noticia of arrayNoticias;" >
+      <ion-card-header>
+        <img src="assets/perfil/Don.jpeg" class="imgRedonda">
+        <ion-img [src]="noticia.imagen"></ion-img>
+        <ion-card-title>{{noticia.titulo}}</ion-card-title>
+        <ion-card-subtitle>{{noticia.subtitulo}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <a>{{noticia.contenido}}</a>
+      </ion-card-content>
+      <ion-item color="blue">
+        <ion-button class="botonReaccion" (click)="onClickFuntion($event)">
+          <img  *ngIf="estado_blanco" src="assets/reaccion/heath-black.png" id="CorazonBlanco" class="colorIcon"  > 
+          <img *ngIf="estado_color" src="assets/reaccion/hearth-color.png" id="CorazonColor" class="colorIcon" >
+        </ion-button>
+        <ion-button class="botonCompartir">compartir</ion-button>
+        <ion-button class="botonComentario"(click)="onClickComentario($event)">comentario</ion-button>
+        
+      </ion-item>
+      <ion-item *ngIf="comentario">
+        <ion-label position="floating">comentario</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    </ion-card>
+  </div>
+  
+  <div>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="schedule">
+          <ion-icon name="home-outline"></ion-icon>
+    <!--           <ion-label>Schedule</ion-label>
+          <ion-badge>6</ion-badge> -->
+        </ion-tab-button>
+        <ion-tab-button tab="speakers">
+          <ion-icon name="notifications-outline"></ion-icon>
+          
+        </ion-tab-button>
+    
+        <ion-tab-button tab="map">
+          <ion-icon name="person-circle-outline"></ion-icon>
+        
+        </ion-tab-button>
+    
+      </ion-tab-bar>
+    </ion-tabs>
+    </div>
+  
+</ion-content>
