@@ -39,7 +39,7 @@ export class PublicacionPage implements OnInit {
     
   validar(){
     localStorage.setItem('noticia',JSON.stringify(this.noticia));
-    this.router.navigate(['/vista-administrador'])
+    this.router.navigate(['/inicio'])
     console.log(this.noticia)
     
   }

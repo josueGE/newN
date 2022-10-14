@@ -12,11 +12,14 @@
 
   <h1>Iniciar sesion</h1>
   <p>Antes de usar esta aplicacion por favor inicia sesion para continuar primero</p>
-  <input type="text" id="usuario" placeholder="Usuario"><br>
-  <input type="password" id="contrasenea" placeholder="Contraseña"><br>
-</div>
+  <form [formGroup]="loginForm" >  
+    <input type="text" id="email" placeholder="email" formControlName="email"><br>
+    <input type="password" id="password" placeholder="Contraseña" formControlName="password"><br>
+    <span *ngIf="mensaje">intodusca bien los datos</span>
+  </form>
+  </div>
 <div class="botons" >
-  <button routerLink="/inicio">Iniciar sesion</button>
+  <ion-button type="submit" [disabled]="!loginForm.valid" (click)="Validar(loginForm.value)" >Iniciar sesion</ion-button>
   <br>
   <br>
   <a routerLink="/registro">Crear una cuenta</a>

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { PostUsuarioService } from '../servicio/post-usuario.service';
+
+
+import { Validators, FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-registro',
@@ -7,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroPage implements OnInit {
 
-  constructor() { }
+  constructor(public api: PostUsuarioService) { }
 
   ngOnInit() {
   }
